@@ -1,0 +1,22 @@
+name: Delete Rows from Nuxeo DB
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  delete_rows:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Testing git action
+        run: echo "Testing Git Actions"
